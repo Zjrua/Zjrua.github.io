@@ -6,7 +6,7 @@
   <link href="https://zjrua.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjrua.github.io/"/>
-  <updated>2021-01-16T13:02:01.059Z</updated>
+  <updated>2021-01-16T15:11:20.414Z</updated>
   <id>https://zjrua.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LaTeX测试</title>
+    <link href="https://zjrua.github.io/2021/01/16/LaTeX%E6%B5%8B%E8%AF%95/"/>
+    <id>https://zjrua.github.io/2021/01/16/LaTeX%E6%B5%8B%E8%AF%95/</id>
+    <published>2021-01-16T14:30:02.000Z</published>
+    <updated>2021-01-16T15:11:20.414Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文测试博客对Markdown以及$L^AT_EX$的渲染</p><a id="more"></a><p>Source Code:</p><pre><code class="lang-latex">$Taylor公式:f(x) = \sum^{n}_{i=0}f^{(i)}(x_0)*(x-x_0)^i$$\lim_{n\to \infty}a_n=A:\forall\epsilon&gt;0,\exist N\in \mathbb{N},s.t. n&gt;N时,|a_n-A|&lt;\epsilon$</code></pre><p>View:</p><p>$Taylor公式:f(x) = \sum^{n}_{i=0}f^{(i)}(x_0)*(x-x_0)^i$</p><p>$\lim_{n\to \infty}a_n=A:\forall\epsilon&gt;0,\exist N\in \mathbb{N},s.t. n&gt;N时,|a_n-A|&lt;\epsilon$</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本文测试博客对Markdown以及$L^AT_EX$的渲染&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="LaTeX" scheme="https://zjrua.github.io/tags/LaTeX/"/>
+    
+  </entry>
   
   <entry>
     <title>Minecraft配置</title>
