@@ -6,7 +6,7 @@
   <link href="https://zjrua.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjrua.github.io/"/>
-  <updated>2021-01-18T07:41:55.956Z</updated>
+  <updated>2021-02-05T14:28:59.437Z</updated>
   <id>https://zjrua.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我最近在做什么</title>
+    <link href="https://zjrua.github.io/2021/02/05/%E6%88%91%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>https://zjrua.github.io/2021/02/05/%E6%88%91%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/</id>
+    <published>2021-02-05T14:20:27.000Z</published>
+    <updated>2021-02-05T14:28:59.437Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul><li>拖地</li><li>刷碗</li><li>开窗</li><li>馏干粮</li><li>熬稀饭<h1 id="有ddl"><a href="#有ddl" class="headerlink" title="有ddl"></a>有ddl</h1></li><li>数学建模美赛(MCM&amp;ICM 2021)</li><li>Minecraft服务器调试<h1 id="无ddl"><a href="#无ddl" class="headerlink" title="无ddl"></a>无ddl</h1></li><li>学习 <code>python</code></li><li>翻译 <code>Missing Semester</code></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="人话" scheme="https://zjrua.github.io/categories/%E4%BA%BA%E8%AF%9D/"/>
+    
+    
+    <category term="日常" scheme="https://zjrua.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>私货夹带</title>
@@ -44,7 +68,7 @@
     <published>2021-01-16T14:30:02.000Z</published>
     <updated>2021-01-17T09:37:51.337Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本文测试博客对Markdown以及$L^AT_EX$的渲染</p><a id="more"></a><h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code:"></a>Source Code:</h1><pre><code class="lang-latex">$Taylor公式:f(x) = \sum^{n}_{i=0}f^{(i)}(x_0)*(x-x_0)^i$$\lim_{n\to \infty}a_n=A:\forall\epsilon&gt;0,\exists N\in \mathbb{N},s.t. n&gt;N时,|a_n-A|&lt;\epsilon$</code></pre><h1 id="View"><a href="#View" class="headerlink" title="View:"></a>View:</h1><p>$Taylor公式:f(x) = \sum^{n}_{i=0}f^{(i)}(x_0)*(x-x_0)^i$</p><p>$\lim_{n\to \infty}a_n=A:\forall\epsilon&gt;0,\exists N\in \mathbb{N},s.t. n&gt;N时,|a_n-A|&lt;\epsilon$</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本文测试博客对Markdown以及$L^AT_EX$的渲染</p><a id="more"></a><h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code:"></a>Source Code:</h1><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span>Taylor公式:f(x) = <span class="keyword">\sum</span><span class="built_in">^</span>{n}<span class="built_in">_</span>{i=0}f<span class="built_in">^</span>{(i)}(x<span class="built_in">_</span>0)*(x-x<span class="built_in">_</span>0)<span class="built_in">^</span>i<span class="built_in">$</span></span><br><span class="line"><span class="built_in">$</span><span class="keyword">\lim</span><span class="built_in">_</span>{n<span class="keyword">\to</span> <span class="keyword">\infty</span>}a<span class="built_in">_</span>n=A:<span class="keyword">\forall</span><span class="keyword">\epsilon</span>&gt;0,<span class="keyword">\exists</span> N<span class="keyword">\in</span> <span class="keyword">\mathbb</span>{N},s.t. n&gt;N时,|a<span class="built_in">_</span>n-A|&lt;<span class="keyword">\epsilon</span><span class="built_in">$</span></span><br></pre></td></tr></tbody></table></figure><h1 id="View"><a href="#View" class="headerlink" title="View:"></a>View:</h1><p>$Taylor公式:f(x) = \sum^{n}_{i=0}f^{(i)}(x_0)*(x-x_0)^i$</p><p>$\lim_{n\to \infty}a_n=A:\forall\epsilon&gt;0,\exists N\in \mathbb{N},s.t. n&gt;N时,|a_n-A|&lt;\epsilon$</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;本文测试博客对Markdown以及$L^AT_EX$的渲染&lt;/p&gt;</summary>
