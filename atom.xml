@@ -6,7 +6,7 @@
   <link href="https://zjrua.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjrua.github.io/"/>
-  <updated>2021-02-07T09:00:08.809Z</updated>
+  <updated>2021-02-09T07:49:14.924Z</updated>
   <id>https://zjrua.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zjrua.github.io/2021/02/07/MCM-ICM-2021-D-Probelm/"/>
     <id>https://zjrua.github.io/2021/02/07/MCM-ICM-2021-D-Probelm/</id>
     <published>2021-02-07T08:53:13.000Z</published>
-    <updated>2021-02-07T09:00:08.809Z</updated>
+    <updated>2021-02-09T07:49:14.924Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>第一次参加美国大学生数学建模竞赛(下文简称美赛)，由于美国政府将哈工大列入实体清单，所以我们不能用 <code>MATLAB</code> ，所以考虑 <code>Octave</code> 以及 <code>Python</code> 进行问题的处理</p><p>之前一直在用 <code>C++</code> ，对<code>Python</code> 的语法不熟悉， <code>numpy</code> 和 <code>pandas</code> 库的函数也很陌生，也不会用 <code>matplotlib</code> 画图，总之就是非常菜</p><p><a href="https://github.com/Zjrua/MCM2021">github仓库</a></p><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>第一次参加美国大学生数学建模竞赛(下文简称美赛)，由于美国政府将哈工大列入实体清单，所以我们不能用 <code>MATLAB</code> ，所以考虑 <code>Octave</code> 以及 <code>Python</code> 进行问题的处理</p><p>之前一直在用 <code>C++</code> ，对<code>Python</code> 的语法不熟悉， <code>numpy</code> 和 <code>pandas</code> 库的函数也很陌生，也不会用 <code>matplotlib</code> 画图，总之就是非常菜</p><p><a href="https://github.com/Zjrua/MCM2021">github仓库</a></p>]]></content>
     
     
     <summary type="html">The first time to attend MCM&amp;ICM</summary>
