@@ -6,7 +6,7 @@
   <link href="https://zjrua.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjrua.github.io/"/>
-  <updated>2021-02-23T14:34:50.303Z</updated>
+  <updated>2022-01-09T13:10:38.895Z</updated>
   <id>https://zjrua.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://zjrua.github.io/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    <id>https://zjrua.github.io/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/</id>
+    <published>2022-01-09T12:51:52.171Z</published>
+    <updated>2022-01-09T13:10:38.895Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Ubuntu-Server备忘录"><a href="#Ubuntu-Server备忘录" class="headerlink" title="Ubuntu Server备忘录"></a>Ubuntu Server备忘录</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="我为啥要写这篇备忘录"><a href="#我为啥要写这篇备忘录" class="headerlink" title="我为啥要写这篇备忘录"></a>我为啥要写这篇备忘录</h3><p><del>因为上次写的保存之前系统更新重启然后没了</del></p><p>因为服务器被我搞坏了懒得修，所以重装一遍系统</p><h3 id="在这篇备忘录里能看到什么"><a href="#在这篇备忘录里能看到什么" class="headerlink" title="在这篇备忘录里能看到什么"></a>在这篇备忘录里能看到什么</h3><ul><li><p>从U盘安装<strong>Ubuntu Server</strong></p></li><li><p><strong>pip</strong> &amp; <strong>apt</strong>换源</p></li><li><p>安装<strong>zerotier</strong>并加入虚拟局域网</p></li><li><p>用另一台电脑远程登陆服务器 &amp; 连接<strong>GitHub</strong></p></li><li><p>安装并初步配置<strong>MySQL</strong></p></li><li><p>后续的<strong>python</strong>环境的配置，包括但不限于<strong>CUDA</strong>的安装</p></li></ul><h2 id="1-从U盘安装Ubuntu-Server"><a href="#1-从U盘安装Ubuntu-Server" class="headerlink" title="1. 从U盘安装Ubuntu Server"></a>1. 从U盘安装Ubuntu Server</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul><li><p>一个U盘</p></li><li><p><a href="https://ubuntu.com/download/server">Ubuntu Server的系统镜像</a></p></li><li><p>一台电脑</p></li></ul><h3 id="制作U盘启动盘"><a href="#制作U盘启动盘" class="headerlink" title="制作U盘启动盘"></a>制作U盘启动盘</h3><p><a href="https://www.ultraiso.com/download.html">UltraISO</a></p><h3 id="从U盘启动"><a href="#从U盘启动" class="headerlink" title="从U盘启动"></a>从U盘启动</h3><h2 id="2-pip-amp-apt换源"><a href="#2-pip-amp-apt换源" class="headerlink" title="2.pip &amp; apt换源"></a>2.pip &amp; apt换源</h2><h3 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a><strong>apt</strong>换源</h3><p>在系统安装的过程中会提示更换<strong>Mirror Address</strong></p><p>我们也可以在进入系统之后通过编辑 <code>/etc/apt/sources.list</code> 来更换系统源</p><p>建议在更新之前，通过下面的命令，将原来的源文件备份一下</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></tbody></table></figure><p>然后运行</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></tbody></table></figure><p>用<strong>Vim</strong>打开源文件，将默认的地址替换为下列任一地址</p><ul><li><p>如果有<strong>清华大学</strong>情怀 <code>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</code></p></li><li><p>如果对<strong>速度</strong>有极致的追求 <code>http://mirrors.163.com/ubuntu/</code></p></li><li><p>如果是精神<strong>哈工大</strong>人 <code>http://mirrors.hit.edu.cn/ubuntu/</code></p></li></ul><p>当然，还有诸如山大镜像站，阿里云等优秀镜像站，就不一一推荐了</p><h3 id="pip换源"><a href="#pip换源" class="headerlink" title="pip换源"></a><strong>pip</strong>换源</h3><p><del>首先，要想给<strong>pip</strong>换源，我们得先安装<strong>pip</strong></del></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></tbody></table></figure><p><strong>pip</strong>换源就相对简单一些</p><p>直接在终端里进行一个</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></tbody></table></figure><p>的运行就好了</p><p>或者只是想临时用一下，还可以运行</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></tbody></table></figure><p>当然，pip也有很多其他优秀的镜像站，在此不一一列举了</p><h2 id="3-安装zerotier并加入虚拟局域网"><a href="#3-安装zerotier并加入虚拟局域网" class="headerlink" title="3.安装zerotier并加入虚拟局域网"></a>3.安装<strong>zerotier</strong>并加入虚拟局域网</h2><h3 id="什么是zerotier"><a href="#什么是zerotier" class="headerlink" title="什么是zerotier"></a>什么是<strong>zerotier</strong></h3><p><del>自行百度</del></p><h3 id="在Ubuntu-Server下安装"><a href="#在Ubuntu-Server下安装" class="headerlink" title="在Ubuntu Server下安装"></a>在<strong>Ubuntu Server</strong>下安装</h3><p>可以直接根据<a href="https://www.zerotier.com/download/"><strong>zerotier</strong>官网</a>给出的源代码，直接进行一个运行</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://install.zerotier.com | sudo bash</span><br></pre></td></tr></tbody></table></figure><p>等待<strong>zerotier</strong>安装完，会提示</p><figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*** Success! You are ZeroTier address [ c942504c9e ]</span><br></pre></td></tr></tbody></table></figure><p>其中<code>c942504c9e</code>就是设备ID</p><p>在<strong>ZeroTier</strong>创建了虚拟局域网之后，会得到一个<strong>Network ID</strong></p><p>随后在终端中运行</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zerotier-cli join Network_ID <span class="comment">#把Network_ID替换成自己的ID</span></span><br></pre></td></tr></tbody></table></figure><p>最后在<strong>Zero Tier</strong>的管理界面授权就可以加入虚拟局域网了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021寒假游记</title>
+    <link href="https://zjrua.github.io/2021/03/06/2021%E5%AF%92%E5%81%87%E6%B8%B8%E8%AE%B0/"/>
+    <id>https://zjrua.github.io/2021/03/06/2021%E5%AF%92%E5%81%87%E6%B8%B8%E8%AE%B0/</id>
+    <published>2021-03-06T09:05:32.000Z</published>
+    <updated>2021-03-06T09:21:50.335Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h2>]]></content>
+    
+    
+    <summary type="html">Zjrua怎么过的这个寒假</summary>
+    
+    
+    
+    <category term="人话" scheme="https://zjrua.github.io/categories/%E4%BA%BA%E8%AF%9D/"/>
+    
+    
+    <category term="日常, 杂思" scheme="https://zjrua.github.io/tags/%E6%97%A5%E5%B8%B8-%E6%9D%82%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>Happy Niu Year</title>
@@ -61,9 +102,9 @@
     <link href="https://zjrua.github.io/2021/02/05/%E6%88%91%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>https://zjrua.github.io/2021/02/05/%E6%88%91%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/</id>
     <published>2021-02-05T14:20:27.000Z</published>
-    <updated>2021-02-19T11:08:00.595Z</updated>
+    <updated>2021-03-06T09:02:16.826Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h2><ul><li><p>拖地</p></li><li><p>刷碗</p></li><li><p>开窗</p></li><li><p>馏干粮</p></li><li><p>熬稀饭</p></li><li><p><del>驾校打卡</del></p></li></ul><h2 id="有ddl"><a href="#有ddl" class="headerlink" title="有ddl"></a>有ddl</h2><ul><li><p><del>数学建模美赛(MCM&amp;ICM 2021) 2021.2.5~2021.2.9</del></p></li><li><p><del>Minecraft服务器调试 deadline:2021.2.7</del></p></li><li><p><del>CN_Missemi_ch1:[396-594]CHN.txt deadline:2021.2.12</del>(咕咕咕)</p></li><li><p>研究蒙特卡洛方法 deadline:2021.3</p></li></ul><h2 id="无ddl"><a href="#无ddl" class="headerlink" title="无ddl"></a>无ddl</h2><ul><li><p>学习 <code>python</code></p></li><li><p>翻译 <code>Missing Semester</code></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h2><ul><li><p>睡觉</p></li><li><p>干饭</p></li><li><p>躺在床上颓废</p></li><li><p>写博客</p></li><li><p>翻译 <code>missemi</code></p></li></ul><h2 id="有ddl"><a href="#有ddl" class="headerlink" title="有ddl"></a>有ddl</h2><ul><li><p><del>数学建模美赛(MCM&amp;ICM 2021) 2021.2.5~2021.2.9</del></p></li><li><p><del>Minecraft服务器调试 deadline:2021.2.7</del></p></li><li><p><del>CN_Missemi_ch1:[396-594]CHN.txt deadline:2021.2.12</del>(咕咕咕)</p></li><li><p>研究蒙特卡洛方法 deadline:2021.3</p></li></ul><h2 id="无ddl"><a href="#无ddl" class="headerlink" title="无ddl"></a>无ddl</h2><ul><li><p>学习 <code>python</code></p></li><li><p>翻译 <code>Missing Semester</code></p></li></ul>]]></content>
     
     
     <summary type="html">关于这只Zjrua每天都在干些什么</summary>

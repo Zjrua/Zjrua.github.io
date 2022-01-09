@@ -22,21 +22,19 @@
     var CONFIG = {"hostname":"zjrua.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="使用桌面版网页阅读体验更佳(左下角可播放音乐) 我是谁？可达鸭 我是Zjrua，曾经的一名山东OIer，擅长摸鱼压线，NOIP2018山东省三(压线) 现就读于哈尔滨工业大学，2020级强基计划数学专业(被压线录取) 这是啥？这是我的博客，会不定期更新一些自己写的东西，关于一些杂七杂八或者是分享自己的一些经验，可能偶尔心态崩掉写一写自己的感想之类的 价值观or世界观？虽然知道身边有很多丑或恶，但">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://zjrua.github.io/about/index.html">
+  <meta name="description" content="Ubuntu Server备忘录写在前面我为啥要写这篇备忘录因为上次写的保存之前系统更新重启然后没了 因为服务器被我搞坏了懒得修，所以重装一遍系统 在这篇备忘录里能看到什么 从U盘安装Ubuntu Server  pip &amp; apt换源  安装zerotier并加入虚拟局域网  用另一台电脑远程登陆服务器 &amp; 连接GitHub  安装并初步配置MySQL  后续的python环境的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zjrua&#39;s blogs">
+<meta property="og:url" content="https://zjrua.github.io/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/index.html">
 <meta property="og:site_name" content="Zjrua&#39;s blogs">
-<meta property="og:description" content="使用桌面版网页阅读体验更佳(左下角可播放音乐) 我是谁？可达鸭 我是Zjrua，曾经的一名山东OIer，擅长摸鱼压线，NOIP2018山东省三(压线) 现就读于哈尔滨工业大学，2020级强基计划数学专业(被压线录取) 这是啥？这是我的博客，会不定期更新一些自己写的东西，关于一些杂七杂八或者是分享自己的一些经验，可能偶尔心态崩掉写一写自己的感想之类的 价值观or世界观？虽然知道身边有很多丑或恶，但">
+<meta property="og:description" content="Ubuntu Server备忘录写在前面我为啥要写这篇备忘录因为上次写的保存之前系统更新重启然后没了 因为服务器被我搞坏了懒得修，所以重装一遍系统 在这篇备忘录里能看到什么 从U盘安装Ubuntu Server  pip &amp; apt换源  安装zerotier并加入虚拟局域网  用另一台电脑远程登陆服务器 &amp; 连接GitHub  安装并初步配置MySQL  后续的python环境的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Zjrua/imagehost/master/%E5%A4%B4%E5%83%8F.jpg">
-<meta property="article:published_time" content="2020-01-14T00:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-05T14:35:59.239Z">
+<meta property="article:published_time" content="2022-01-09T12:51:52.171Z">
+<meta property="article:modified_time" content="2022-01-09T13:10:38.895Z">
 <meta property="article:author" content="Zjrua">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Zjrua/imagehost/master/%E5%A4%B4%E5%83%8F.jpg">
 
-<link rel="canonical" href="https://zjrua.github.io/about/">
+<link rel="canonical" href="https://zjrua.github.io/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -44,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>About | Zjrua's blogs
-</title>
+  <title> | Zjrua's blogs</title>
   
 
 
@@ -164,51 +161,160 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zjrua.github.io/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/Zjrua/imagehost/master/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="Zjrua">
+      <meta itemprop="description" content="∃ε＞0, |zjr - 自我放弃|≥ε">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zjrua's blogs">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">About
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2022-01-09 20:51:52 / 修改时间：21:10:38" itemprop="dateCreated datePublished" datetime="2022-01-09T20:51:52+08:00">2022-01-09</time>
+            </span>
+
+          
+            <span id="/2022/01/09/Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Ubuntu-Server备忘录"><a href="#Ubuntu-Server备忘录" class="headerlink" title="Ubuntu Server备忘录"></a>Ubuntu Server备忘录</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="我为啥要写这篇备忘录"><a href="#我为啥要写这篇备忘录" class="headerlink" title="我为啥要写这篇备忘录"></a>我为啥要写这篇备忘录</h3><p><del>因为上次写的保存之前系统更新重启然后没了</del></p>
+<p>因为服务器被我搞坏了懒得修，所以重装一遍系统</p>
+<h3 id="在这篇备忘录里能看到什么"><a href="#在这篇备忘录里能看到什么" class="headerlink" title="在这篇备忘录里能看到什么"></a>在这篇备忘录里能看到什么</h3><ul>
+<li><p>从U盘安装<strong>Ubuntu Server</strong></p>
+</li>
+<li><p><strong>pip</strong> &amp; <strong>apt</strong>换源</p>
+</li>
+<li><p>安装<strong>zerotier</strong>并加入虚拟局域网</p>
+</li>
+<li><p>用另一台电脑远程登陆服务器 &amp; 连接<strong>GitHub</strong></p>
+</li>
+<li><p>安装并初步配置<strong>MySQL</strong></p>
+</li>
+<li><p>后续的<strong>python</strong>环境的配置，包括但不限于<strong>CUDA</strong>的安装</p>
+</li>
+</ul>
+<h2 id="1-从U盘安装Ubuntu-Server"><a href="#1-从U盘安装Ubuntu-Server" class="headerlink" title="1. 从U盘安装Ubuntu Server"></a>1. 从U盘安装Ubuntu Server</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+<li><p>一个U盘</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">Ubuntu Server的系统镜像</a></p>
+</li>
+<li><p>一台电脑</p>
+</li>
+</ul>
+<h3 id="制作U盘启动盘"><a href="#制作U盘启动盘" class="headerlink" title="制作U盘启动盘"></a>制作U盘启动盘</h3><p><a target="_blank" rel="noopener" href="https://www.ultraiso.com/download.html">UltraISO</a></p>
+<h3 id="从U盘启动"><a href="#从U盘启动" class="headerlink" title="从U盘启动"></a>从U盘启动</h3><h2 id="2-pip-amp-apt换源"><a href="#2-pip-amp-apt换源" class="headerlink" title="2.pip &amp; apt换源"></a>2.pip &amp; apt换源</h2><h3 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a><strong>apt</strong>换源</h3><p>在系统安装的过程中会提示更换<strong>Mirror Address</strong></p>
+<p>我们也可以在进入系统之后通过编辑 <code>/etc/apt/sources.list</code> 来更换系统源</p>
+<p>建议在更新之前，通过下面的命令，将原来的源文件备份一下</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></tbody></table></figure>
+<p>然后运行</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></tbody></table></figure>
+<p>用<strong>Vim</strong>打开源文件，将默认的地址替换为下列任一地址</p>
+<ul>
+<li><p>如果有<strong>清华大学</strong>情怀 <code>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</code></p>
+</li>
+<li><p>如果对<strong>速度</strong>有极致的追求 <code>http://mirrors.163.com/ubuntu/</code></p>
+</li>
+<li><p>如果是精神<strong>哈工大</strong>人 <code>http://mirrors.hit.edu.cn/ubuntu/</code></p>
+</li>
+</ul>
+<p>当然，还有诸如山大镜像站，阿里云等优秀镜像站，就不一一推荐了</p>
+<h3 id="pip换源"><a href="#pip换源" class="headerlink" title="pip换源"></a><strong>pip</strong>换源</h3><p><del>首先，要想给<strong>pip</strong>换源，我们得先安装<strong>pip</strong></del></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>pip</strong>换源就相对简单一些</p>
+<p>直接在终端里进行一个</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></tbody></table></figure>
+<p>的运行就好了</p>
+<p>或者只是想临时用一下，还可以运行</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></tbody></table></figure>
+<p>当然，pip也有很多其他优秀的镜像站，在此不一一列举了</p>
+<h2 id="3-安装zerotier并加入虚拟局域网"><a href="#3-安装zerotier并加入虚拟局域网" class="headerlink" title="3.安装zerotier并加入虚拟局域网"></a>3.安装<strong>zerotier</strong>并加入虚拟局域网</h2><h3 id="什么是zerotier"><a href="#什么是zerotier" class="headerlink" title="什么是zerotier"></a>什么是<strong>zerotier</strong></h3><p><del>自行百度</del></p>
+<h3 id="在Ubuntu-Server下安装"><a href="#在Ubuntu-Server下安装" class="headerlink" title="在Ubuntu Server下安装"></a>在<strong>Ubuntu Server</strong>下安装</h3><p>可以直接根据<a target="_blank" rel="noopener" href="https://www.zerotier.com/download/"><strong>zerotier</strong>官网</a>给出的源代码，直接进行一个运行</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://install.zerotier.com | sudo bash</span><br></pre></td></tr></tbody></table></figure>
+<p>等待<strong>zerotier</strong>安装完，会提示</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*** Success! You are ZeroTier address [ c942504c9e ]</span><br></pre></td></tr></tbody></table></figure>
+<p>其中<code>c942504c9e</code>就是设备ID</p>
+<p>在<strong>ZeroTier</strong>创建了虚拟局域网之后，会得到一个<strong>Network ID</strong></p>
+<p>随后在终端中运行</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zerotier-cli join Network_ID <span class="comment">#把Network_ID替换成自己的ID</span></span><br></pre></td></tr></tbody></table></figure>
+<p>最后在<strong>Zero Tier</strong>的管理界面授权就可以加入虚拟局域网了</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/06/2021%E5%AF%92%E5%81%87%E6%B8%B8%E8%AE%B0/" rel="prev" title="2021寒假游记">
+      <i class="fa fa-chevron-left"></i> 2021寒假游记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <p><img src="https://raw.githubusercontent.com/Zjrua/imagehost/master/%E5%A4%B4%E5%83%8F.jpg" alt=""></p>
-<p><em>使用桌面版网页阅读体验更佳(左下角可播放音乐)</em></p>
-<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p><del>可达鸭</del></p>
-<p>我是Zjrua，曾经的一名山东OIer，擅长摸鱼<del>压线</del>，NOIP2018山东省三(压线)</p>
-<p>现就读于哈尔滨工业大学，2020级强基计划数学专业(被压线录取)</p>
-<h1 id="这是啥？"><a href="#这是啥？" class="headerlink" title="这是啥？"></a>这是啥？</h1><p>这是我的博客，会不定期更新一些自己写的东西，关于一些杂七杂八或者是分享自己的一些经验，可能偶尔心态崩掉写一写自己的感想之类的</p>
-<h1 id="价值观or世界观？"><a href="#价值观or世界观？" class="headerlink" title="价值观or世界观？"></a>价值观or世界观？</h1><p>虽然知道身边有很多丑或恶，但是依然愿意相信美好存在，自始至终</p>
-<h1 id="未来的方向？"><a href="#未来的方向？" class="headerlink" title="未来的方向？"></a>未来的方向？</h1><p>？</p>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -259,7 +365,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">我是谁？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%95%A5%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">这是啥？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%B7%E5%80%BC%E8%A7%82or%E4%B8%96%E7%95%8C%E8%A7%82%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">价值观or世界观？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%96%B9%E5%90%91%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">未来的方向？</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-Server%E5%A4%87%E5%BF%98%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu Server备忘录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E4%B8%BA%E5%95%A5%E8%A6%81%E5%86%99%E8%BF%99%E7%AF%87%E5%A4%87%E5%BF%98%E5%BD%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">我为啥要写这篇备忘录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E8%BF%99%E7%AF%87%E5%A4%87%E5%BF%98%E5%BD%95%E9%87%8C%E8%83%BD%E7%9C%8B%E5%88%B0%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.2.</span> <span class="nav-text">在这篇备忘录里能看到什么</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BB%8EU%E7%9B%98%E5%AE%89%E8%A3%85Ubuntu-Server"><span class="nav-number">1.2.</span> <span class="nav-text">1. 从U盘安装Ubuntu Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.2.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="nav-number">1.2.2.</span> <span class="nav-text">制作U盘启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8EU%E7%9B%98%E5%90%AF%E5%8A%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">从U盘启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pip-amp-apt%E6%8D%A2%E6%BA%90"><span class="nav-number">1.3.</span> <span class="nav-text">2.pip &amp; apt换源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#apt%E6%8D%A2%E6%BA%90"><span class="nav-number">1.3.1.</span> <span class="nav-text">apt换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pip%E6%8D%A2%E6%BA%90"><span class="nav-number">1.3.2.</span> <span class="nav-text">pip换源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85zerotier%E5%B9%B6%E5%8A%A0%E5%85%A5%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-number">1.4.</span> <span class="nav-text">3.安装zerotier并加入虚拟局域网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFzerotier"><span class="nav-number">1.4.1.</span> <span class="nav-text">什么是zerotier</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8Ubuntu-Server%E4%B8%8B%E5%AE%89%E8%A3%85"><span class="nav-number">1.4.2.</span> <span class="nav-text">在Ubuntu Server下安装</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
