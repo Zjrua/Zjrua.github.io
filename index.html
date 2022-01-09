@@ -191,7 +191,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-01-09 21:40:00 / 修改时间：22:04:29" itemprop="dateCreated datePublished" datetime="2022-01-09T21:40:00+08:00">2022-01-09</time>
+              <time title="创建时间：2022-01-09 21:40:00 / 修改时间：22:12:33" itemprop="dateCreated datePublished" datetime="2022-01-09T21:40:00+08:00">2022-01-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,7 +252,7 @@
 <li><p>后续的<strong>python</strong>环境的配置，包括但不限于<strong>CUDA</strong>的安装</p>
 </li>
 </ul>
-<h2 id="1-从U盘安装Ubuntu-Server"><a href="#1-从U盘安装Ubuntu-Server" class="headerlink" title="1. 从U盘安装Ubuntu Server"></a>1. 从U盘安装Ubuntu Server</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+<h2 id="从U盘安装Ubuntu-Server"><a href="#从U盘安装Ubuntu-Server" class="headerlink" title="从U盘安装Ubuntu Server"></a>从U盘安装Ubuntu Server</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
 <li><p>一个U盘</p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">Ubuntu Server的系统镜像</a></p>
@@ -261,7 +261,7 @@
 </li>
 </ul>
 <h3 id="制作U盘启动盘"><a href="#制作U盘启动盘" class="headerlink" title="制作U盘启动盘"></a>制作U盘启动盘</h3><p><a target="_blank" rel="noopener" href="https://www.ultraiso.com/download.html">UltraISO</a></p>
-<h3 id="从U盘启动"><a href="#从U盘启动" class="headerlink" title="从U盘启动"></a>从U盘启动</h3><h2 id="2-pip-amp-apt换源"><a href="#2-pip-amp-apt换源" class="headerlink" title="2.pip &amp; apt换源"></a>2.pip &amp; apt换源</h2><h3 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a><strong>apt</strong>换源</h3><p>在系统安装的过程中会提示更换<strong>Mirror Address</strong></p>
+<h3 id="从U盘启动"><a href="#从U盘启动" class="headerlink" title="从U盘启动"></a>从U盘启动</h3><h2 id="pip-amp-apt换源"><a href="#pip-amp-apt换源" class="headerlink" title="pip &amp; apt换源"></a>pip &amp; apt换源</h2><h3 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a><strong>apt</strong>换源</h3><p>在系统安装的过程中会提示更换<strong>Mirror Address</strong></p>
 <p>我们也可以在进入系统之后通过编辑 <code>/etc/apt/sources.list</code> 来更换系统源</p>
 <p>建议在更新之前，通过下面的命令，将原来的源文件备份一下</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></tbody></table></figure>
@@ -286,7 +286,7 @@
 <p>或者只是想临时用一下，还可以运行</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></tbody></table></figure>
 <p>当然，pip也有很多其他优秀的镜像站，在此不一一列举了</p>
-<h2 id="3-安装zerotier并加入虚拟局域网"><a href="#3-安装zerotier并加入虚拟局域网" class="headerlink" title="3.安装zerotier并加入虚拟局域网"></a>3.安装<strong>zerotier</strong>并加入虚拟局域网</h2><h3 id="什么是zerotier"><a href="#什么是zerotier" class="headerlink" title="什么是zerotier"></a>什么是<strong>zerotier</strong></h3><p><del>自行百度</del></p>
+<h2 id="安装zerotier并加入虚拟局域网"><a href="#安装zerotier并加入虚拟局域网" class="headerlink" title="安装zerotier并加入虚拟局域网"></a>安装<strong>zerotier</strong>并加入虚拟局域网</h2><h3 id="什么是zerotier"><a href="#什么是zerotier" class="headerlink" title="什么是zerotier"></a>什么是<strong>zerotier</strong></h3><p><del>自行百度</del></p>
 <h3 id="在Ubuntu-Server下安装"><a href="#在Ubuntu-Server下安装" class="headerlink" title="在Ubuntu Server下安装"></a>在<strong>Ubuntu Server</strong>下安装</h3><p>可以直接根据<a target="_blank" rel="noopener" href="https://www.zerotier.com/download/"><strong>zerotier</strong>官网</a>给出的源代码，直接进行一个运行</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://install.zerotier.com | sudo bash</span><br></pre></td></tr></tbody></table></figure>
 <p>等待<strong>zerotier</strong>安装完，会提示</p>
@@ -296,7 +296,7 @@
 <p>随后在终端中运行</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zerotier-cli join Network_ID <span class="comment">#把Network_ID替换成自己的ID</span></span><br></pre></td></tr></tbody></table></figure>
 <p>最后在<strong>Zero Tier</strong>的管理界面授权就可以加入虚拟局域网了</p>
-<h2 id="4-用另一台电脑远程登陆服务器-amp-连接GitHub"><a href="#4-用另一台电脑远程登陆服务器-amp-连接GitHub" class="headerlink" title="4.用另一台电脑远程登陆服务器 &amp; 连接GitHub"></a>4.用另一台电脑远程登陆服务器 &amp; 连接<strong>GitHub</strong></h2><h3 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成<strong>ssh</strong>密钥</h3><p>在安装系统时，会提示打开<strong>Openssh</strong>服务</p>
+<h2 id="用另一台电脑远程登陆服务器-amp-连接GitHub"><a href="#用另一台电脑远程登陆服务器-amp-连接GitHub" class="headerlink" title="用另一台电脑远程登陆服务器 &amp; 连接GitHub"></a>用另一台电脑远程登陆服务器 &amp; 连接<strong>GitHub</strong></h2><h3 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成<strong>ssh</strong>密钥</h3><p>在安装系统时，会提示打开<strong>Openssh</strong>服务</p>
 <p>进入系统之后，运行下列命令来生成密钥</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C xxxx@xmail.com</span><br></pre></td></tr></tbody></table></figure>
 <p>再通过下列命令来复制生成的公钥<code>id_rsa.pub</code></p>
