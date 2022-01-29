@@ -6,7 +6,7 @@
   <link href="https://zjrua.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjrua.github.io/"/>
-  <updated>2022-01-12T13:36:40.200Z</updated>
+  <updated>2022-01-22T09:03:07.201Z</updated>
   <id>https://zjrua.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬虫学习笔记</title>
+    <link href="https://zjrua.github.io/2022/01/22/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://zjrua.github.io/2022/01/22/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-01-22T08:56:40.000Z</published>
+    <updated>2022-01-22T09:03:07.201Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><code>Python</code>作为一种拥有众多库的高级语言，可以用简洁的代码实现较为复杂的功能，其中爬虫就是一种较为广泛的应用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="python, 爬虫, 网络" scheme="https://zjrua.github.io/tags/python-%E7%88%AC%E8%99%AB-%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu Server备忘录</title>
